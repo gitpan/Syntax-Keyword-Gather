@@ -1,0 +1,25 @@
+{
+   "resources" : {
+      "repository" : "http://github.com/frioux/Syntax-Keyword-Gather"
+   },
+   "generated_by" : "Dist::Zilla version 1.093290",
+   "meta-spec" : {
+      "version" : 1.4,
+      "url" : "http://module-build.sourceforge.net/META-spec-v1.4.html"
+   },
+   "version" : "0.093420",
+   "name" : "Syntax-Keyword-Gather",
+   "author" : [
+      "Arthur Axel \"fREW\" Schmidt <frioux+cpan@gmail.com>",
+      "Damian Conway"
+   ],
+   "license" : "perl",
+   "build_requires" : {
+      "Test::More" : "0.94"
+   },
+   "requires" : {
+      "Sub::Exporter" : "0.980"
+   },
+   "abstract" : "Implements the Perl 6 'gather/take' control structure in Perl 5"
+}
+
