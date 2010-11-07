@@ -1,8 +1,12 @@
 package Syntax::Keyword::Gather;
-our $VERSION = '0.093420';
+BEGIN {
+  $Syntax::Keyword::Gather::VERSION = '1.001000';
+}
 
+use strict;
+use warnings;
 
-use Carp;
+use Carp 'croak';
 
 use Sub::Exporter -setup => {
    exports => [qw{ break gather gathered take }],
@@ -20,7 +24,7 @@ sub gather(&) {
    local @_;
    push @{$gatherers{$caller}}, bless \@_, 'Syntax::Keyword::Gather::MagicArrayRef';
    die $@
-      if !eval{ &$code } && $@ && !UNIVERSAL::isa($@, Syntax::Keyword::Gather::Break);
+      if !eval{ &$code } && $@ && !UNIVERSAL::isa($@, 'Syntax::Keyword::Gather::Break');
    return @{pop @{$gatherers{$caller}}} if wantarray;
    return   pop @{$gatherers{$caller}}  if defined wantarray;
 }
@@ -46,9 +50,9 @@ sub break() {
 }
 
 package Syntax::Keyword::Gather::MagicArrayRef;
-our $VERSION = '0.093420';
-
-
+BEGIN {
+  $Syntax::Keyword::Gather::MagicArrayRef::VERSION = '1.001000';
+}
 
 use overload
    'bool'   => sub { @{$_[0]} > 0      },
@@ -68,7 +72,7 @@ Syntax::Keyword::Gather
 
 =head1 VERSION
 
-version 0.093420
+version 1.001000
 
 =head1 SYNOPSIS
 
@@ -83,6 +87,16 @@ version 0.093420
     # But use the default set if there aren't any of either...
     take @defaults unless gathered;
  }
+
+or to use the stuff that L<Sub::Exporter> gives us, try
+
+ # this is a silly idea
+ use syntax gather => {
+   gather => { -as => 'bake' },
+   take   => { -as => 'cake' },
+ };
+
+ my @vals = bake { cake (1...10) };
 
 =head1 DESCRIPTION
 
@@ -246,19 +260,23 @@ It would be nice to be able to code the default case as:
 but Perl 5's C<or> imposes a scalar context on its left argument.
 This is arguably a bug and definitely an irritation.
 
-=for Pod::Coverage gather
- gathered
- take
- break
-
 =head1 AUTHORS
 
-  Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
-  Damian Conway
+=over 4
+
+=item *
+
+Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+
+=item *
+
+Damian Conway
+
+=back
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

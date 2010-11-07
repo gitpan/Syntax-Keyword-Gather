@@ -4,19 +4,50 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker;
+use ExtUtils::MakeMaker 6.31;
 
-WriteMakefile(
-  DISTNAME  => 'Syntax-Keyword-Gather',
-  NAME      => 'Syntax::Keyword::Gather',
-  AUTHOR    => "Arthur\ Axel\ \"fREW\"\ Schmidt\ \<frioux\+cpan\@gmail\.com\>\,\ Damian\ Conway",
-  ABSTRACT  => "Implements\ the\ Perl\ 6\ \'gather\/take\'\ control\ structure\ in\ Perl\ 5",
-  VERSION   => '0.093420',
-  EXE_FILES => [ qw() ],
-  (eval { ExtUtils::MakeMaker->VERSION(6.31) } ? (LICENSE => 'perl') : ()),
-  PREREQ_PM    => {
-    "Sub::Exporter" => '0.980',
+
+
+my %WriteMakefileArgs = (
+  'ABSTRACT' => 'Implements the Perl 6 \'gather/take\' control structure in Perl 5',
+  'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>, Damian Conway',
+  'BUILD_REQUIRES' => {},
+  'CONFIGURE_REQUIRES' => {
+    'ExtUtils::MakeMaker' => '6.31'
   },
-  test => {TESTS => 't/*.t'}
+  'DISTNAME' => 'Syntax-Keyword-Gather',
+  'EXE_FILES' => [],
+  'LICENSE' => 'perl',
+  'NAME' => 'Syntax::Keyword::Gather',
+  'PREREQ_PM' => {
+    'Sub::Exporter' => '0.980',
+    'Test::More' => '0.94',
+    'syntax' => '0.002'
+  },
+  'VERSION' => '1.001000',
+  'test' => {
+    'TESTS' => 't/*.t'
+  }
 );
+
+
+unless ( eval { ExtUtils::MakeMaker->VERSION(6.56) } ) {
+  my $br = delete $WriteMakefileArgs{BUILD_REQUIRES};
+  my $pp = $WriteMakefileArgs{PREREQ_PM};
+  for my $mod ( keys %$br ) {
+    if ( exists $pp->{$mod} ) {
+      $pp->{$mod} = $br->{$mod} if $br->{$mod} > $pp->{$mod};
+    }
+    else {
+      $pp->{$mod} = $br->{$mod};
+    }
+  }
+}
+
+delete $WriteMakefileArgs{CONFIGURE_REQUIRES}
+  unless eval { ExtUtils::MakeMaker->VERSION(6.52) };
+
+WriteMakefile(%WriteMakefileArgs);
+
+
 

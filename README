@@ -2,7 +2,7 @@ NAME
     Syntax::Keyword::Gather
 
 VERSION
-    version 0.093420
+    version 1.001000
 
 SYNOPSIS
      use Syntax::Keyword::Gather;
@@ -16,6 +16,16 @@ SYNOPSIS
         # But use the default set if there aren't any of either...
         take @defaults unless gathered;
      }
+
+    or to use the stuff that Sub::Exporter gives us, try
+
+     # this is a silly idea
+     use syntax gather => {
+       gather => { -as => 'bake' },
+       take   => { -as => 'cake' },
+     };
+
+     my @vals = bake { cake (1...10) };
 
 DESCRIPTION
     Perl 6 provides a new control structure -- "gather" -- that allows lists
@@ -173,11 +183,12 @@ BUGS AND IRRITATIONS
     arguably a bug and definitely an irritation.
 
 AUTHORS
-      Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
-      Damian Conway
+    *   Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>
+
+    *   Damian Conway
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2009 by Arthur Axel "fREW" Schmidt.
+    This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.
