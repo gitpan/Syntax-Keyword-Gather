@@ -1,14 +1,13 @@
 package Syntax::Keyword::Gather;
-BEGIN {
-  $Syntax::Keyword::Gather::VERSION = '1.001000';
-}
 
 use strict;
 use warnings;
 
+our $VERSION = '1.001001'; # VERSION
+
 use Carp 'croak';
 
-use Sub::Exporter -setup => {
+use Sub::Exporter::Progressive -setup => {
    exports => [qw{ break gather gathered take }],
    groups => {
       default => [qw{ break gather gathered take }],
@@ -50,9 +49,6 @@ sub break() {
 }
 
 package Syntax::Keyword::Gather::MagicArrayRef;
-BEGIN {
-  $Syntax::Keyword::Gather::MagicArrayRef::VERSION = '1.001000';
-}
 
 use overload
    'bool'   => sub { @{$_[0]} > 0      },
@@ -72,7 +68,7 @@ Syntax::Keyword::Gather
 
 =head1 VERSION
 
-version 1.001000
+version 1.001001
 
 =head1 SYNOPSIS
 
@@ -276,7 +272,7 @@ Damian Conway
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

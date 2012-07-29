@@ -5,7 +5,7 @@
       "Damian Conway"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.102342, CPAN::Meta::Converter version 2.102400",
+   "generated_by" : "Dist::Zilla version 4.300020, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -17,12 +17,12 @@
    "prereqs" : {
       "configure" : {
          "requires" : {
-            "ExtUtils::MakeMaker" : "6.31"
+            "ExtUtils::MakeMaker" : "6.30"
          }
       },
       "runtime" : {
          "requires" : {
-            "Sub::Exporter" : "0.980",
+            "Sub::Exporter::Progressive" : "0",
             "Test::More" : "0.94",
             "syntax" : "0.002"
          }
@@ -31,9 +31,11 @@
    "release_status" : "stable",
    "resources" : {
       "repository" : {
-         "url" : "http://github.com/frioux/Syntax-Keyword-Gather"
+         "type" : "git",
+         "url" : "git://github.com/frioux/Syntax-Keyword-Gather.git",
+         "web" : "http://github.com/frioux/Syntax-Keyword-Gather"
       }
    },
-   "version" : "1.001000"
+   "version" : "1.001001"
 }
 

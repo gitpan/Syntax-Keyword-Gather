@@ -4,29 +4,29 @@ use warnings;
 
 
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'Implements the Perl 6 \'gather/take\' control structure in Perl 5',
-  'AUTHOR' => 'Arthur Axel "fREW" Schmidt <frioux+cpan@gmail.com>, Damian Conway',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+  "ABSTRACT" => "Implements the Perl 6 'gather/take' control structure in Perl 5",
+  "AUTHOR" => "Arthur Axel \"fREW\" Schmidt <frioux+cpan\@gmail.com>, Damian Conway",
+  "BUILD_REQUIRES" => {},
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
   },
-  'DISTNAME' => 'Syntax-Keyword-Gather',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'Syntax::Keyword::Gather',
-  'PREREQ_PM' => {
-    'Sub::Exporter' => '0.980',
-    'Test::More' => '0.94',
-    'syntax' => '0.002'
+  "DISTNAME" => "Syntax-Keyword-Gather",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "Syntax::Keyword::Gather",
+  "PREREQ_PM" => {
+    "Sub::Exporter::Progressive" => 0,
+    "Test::More" => "0.94",
+    "syntax" => "0.002"
   },
-  'VERSION' => '1.001000',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "VERSION" => "1.001001",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
