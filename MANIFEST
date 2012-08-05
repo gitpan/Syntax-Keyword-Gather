@@ -5,8 +5,6 @@ META.json
 Makefile.PL
 README
 dist.ini
-lib/Syntax/Feature/Gather.pm
 lib/Syntax/Keyword/Gather.pm
 t/1.t
 t/release-pod-syntax.t
-t/syntax.t

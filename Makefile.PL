@@ -21,10 +21,9 @@ my %WriteMakefileArgs = (
   "NAME" => "Syntax::Keyword::Gather",
   "PREREQ_PM" => {
     "Sub::Exporter::Progressive" => 0,
-    "Test::More" => "0.94",
-    "syntax" => "0.002"
+    "Test::More" => "0.94"
   },
-  "VERSION" => "1.001001",
+  "VERSION" => "1.002000",
   "test" => {
     "TESTS" => "t/*.t"
   }

@@ -23,8 +23,7 @@
       "runtime" : {
          "requires" : {
             "Sub::Exporter::Progressive" : "0",
-            "Test::More" : "0.94",
-            "syntax" : "0.002"
+            "Test::More" : "0.94"
          }
       }
    },
@@ -36,6 +35,6 @@
          "web" : "http://github.com/frioux/Syntax-Keyword-Gather"
       }
    },
-   "version" : "1.001001"
+   "version" : "1.002000"
 }
 

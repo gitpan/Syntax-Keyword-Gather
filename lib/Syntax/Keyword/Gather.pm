@@ -3,7 +3,7 @@ package Syntax::Keyword::Gather;
 use strict;
 use warnings;
 
-our $VERSION = '1.001001'; # VERSION
+our $VERSION = '1.002000'; # VERSION
 
 use Carp 'croak';
 
@@ -68,7 +68,7 @@ Syntax::Keyword::Gather
 
 =head1 VERSION
 
-version 1.001001
+version 1.002000
 
 =head1 SYNOPSIS
 
