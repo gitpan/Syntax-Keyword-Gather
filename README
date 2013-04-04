@@ -2,7 +2,7 @@ NAME
     Syntax::Keyword::Gather
 
 VERSION
-    version 1.002001
+    version 1.002002
 
 SYNOPSIS
      use Syntax::Keyword::Gather;
@@ -161,9 +161,10 @@ HISTORY
     This module was forked from Damian Conway's Perl6::Gather for a few
     reasons.
 
-    to avoid the slightly incendiary name =item to avoid the use of the
-    Perl6::Exporter =item ~ doesn't overload to mean string context =item to
-    no longer takes the current topic ($_)
+    to avoid the slightly incendiary name
+    to avoid the use of the Perl6::Exporter
+    ~ doesn't overload to mean string context
+    to no longer takes the current topic ($_)
 
     The last item is actually due to an unintended side-effect of the fact
     that if "take" has an array of zero length it takes $_, which is
@@ -188,7 +189,7 @@ AUTHORS
     *   Damian Conway
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
+    This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

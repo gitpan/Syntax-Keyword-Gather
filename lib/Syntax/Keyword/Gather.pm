@@ -3,7 +3,7 @@ package Syntax::Keyword::Gather;
 use strict;
 use warnings;
 
-our $VERSION = '1.002001'; # VERSION
+our $VERSION = '1.002002'; # VERSION
 
 use Carp 'croak';
 
@@ -68,7 +68,7 @@ Syntax::Keyword::Gather
 
 =head1 VERSION
 
-version 1.002001
+version 1.002002
 
 =head1 SYNOPSIS
 
@@ -232,8 +232,11 @@ This module was forked from Damian Conway's L<Perl6::Gather> for a few reasons.
 =over 1
 
 =item to avoid the slightly incendiary name
+
 =item to avoid the use of the Perl6::Exporter
+
 =item ~ doesn't overload to mean string context
+
 =item to no longer takes the current topic ($_)
 
 =back
@@ -272,7 +275,7 @@ Damian Conway
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2012 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
