@@ -3,7 +3,9 @@ package Syntax::Keyword::Gather;
 use strict;
 use warnings;
 
-our $VERSION = '1.002002'; # VERSION
+our $VERSION = '1.002003'; # VERSION
+
+# ABSTRACT: Implements the Perl 6 'gather/take' control structure in Perl 5
 
 use Carp 'croak';
 
@@ -64,11 +66,11 @@ __END__
 
 =head1 NAME
 
-Syntax::Keyword::Gather
+Syntax::Keyword::Gather - Implements the Perl 6 'gather/take' control structure in Perl 5
 
 =head1 VERSION
 
-version 1.002002
+version 1.002003
 
 =head1 SYNOPSIS
 
@@ -220,10 +222,6 @@ first line they have in common. We could gather the lines like this:
        else                { last }
     }
  }
-
-=head1 NAME
-
-Syntax::Keyword::Gather - Implements the Perl 6 'gather/take' control structure in Perl 5
 
 =head1 HISTORY
 

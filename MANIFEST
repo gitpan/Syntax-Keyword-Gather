@@ -5,6 +5,7 @@ META.json
 META.yml
 Makefile.PL
 README
+cpanfile
 dist.ini
 lib/Syntax/Keyword/Gather.pm
 t/1.t

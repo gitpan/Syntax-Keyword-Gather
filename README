@@ -1,8 +1,9 @@
 NAME
-    Syntax::Keyword::Gather
+    Syntax::Keyword::Gather - Implements the Perl 6 'gather/take' control
+    structure in Perl 5
 
 VERSION
-    version 1.002002
+    version 1.002003
 
 SYNOPSIS
      use Syntax::Keyword::Gather;
@@ -152,10 +153,6 @@ DESCRIPTION
            else                { last }
         }
      }
-
-NAME
-    Syntax::Keyword::Gather - Implements the Perl 6 'gather/take' control
-    structure in Perl 5
 
 HISTORY
     This module was forked from Damian Conway's Perl6::Gather for a few

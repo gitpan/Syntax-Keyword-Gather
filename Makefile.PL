@@ -20,11 +20,12 @@ my %WriteMakefileArgs = (
   "LICENSE" => "perl",
   "NAME" => "Syntax::Keyword::Gather",
   "PREREQ_PM" => {
-    "Sub::Exporter::Progressive" => 0,
+    "Sub::Exporter::Progressive" => 0
+  },
+  "TEST_REQUIRES" => {
     "Test::More" => "0.94"
   },
-  "TEST_REQUIRES" => {},
-  "VERSION" => "1.002002",
+  "VERSION" => "1.002003",
   "test" => {
     "TESTS" => "t/*.t"
   }
