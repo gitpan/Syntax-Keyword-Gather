@@ -3,7 +3,7 @@ NAME
     structure in Perl 5
 
 VERSION
-    version 1.002003
+    version 1.002004
 
 SYNOPSIS
      use Syntax::Keyword::Gather;
@@ -165,7 +165,7 @@ HISTORY
 
     The last item is actually due to an unintended side-effect of the fact
     that if "take" has an array of zero length it takes $_, which is
-    suprising at the very least. I'll fix that issue if I can.
+    surprising at the very least. I'll fix that issue if I can.
 
 BUGS AND IRRITATIONS
     It would be nice to be able to code the default case as:
@@ -186,7 +186,7 @@ AUTHORS
     *   Damian Conway
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+    This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
     This is free software; you can redistribute it and/or modify it under
     the same terms as the Perl 5 programming language system itself.

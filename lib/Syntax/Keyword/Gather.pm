@@ -3,7 +3,7 @@ package Syntax::Keyword::Gather;
 use strict;
 use warnings;
 
-our $VERSION = '1.002003'; # VERSION
+our $VERSION = '1.002004'; # VERSION
 
 # ABSTRACT: Implements the Perl 6 'gather/take' control structure in Perl 5
 
@@ -64,13 +64,15 @@ __END__
 
 =pod
 
+=encoding UTF-8
+
 =head1 NAME
 
 Syntax::Keyword::Gather - Implements the Perl 6 'gather/take' control structure in Perl 5
 
 =head1 VERSION
 
-version 1.002003
+version 1.002004
 
 =head1 SYNOPSIS
 
@@ -240,7 +242,7 @@ This module was forked from Damian Conway's L<Perl6::Gather> for a few reasons.
 =back
 
 The last item is actually due to an unintended side-effect of the fact that if
-C<take> has an array of zero length it takes $_, which is suprising at the very
+C<take> has an array of zero length it takes $_, which is surprising at the very
 least.  I'll fix that issue if I can.
 
 =head1 BUGS AND IRRITATIONS
@@ -273,7 +275,7 @@ Damian Conway
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Arthur Axel "fREW" Schmidt.
+This software is copyright (c) 2014 by Arthur Axel "fREW" Schmidt.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
