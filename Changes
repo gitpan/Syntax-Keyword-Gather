@@ -1,5 +1,9 @@
 Revision history for Syntax-Keyword-Gather
 
+1.003000  2014-03-14 16:50:16-05:00 America/Chicago
+   - take with no arguments now takes $_! (Thanks Matthias Bloch!)
+   - Ditch RT
+
 1.002004  2014-01-09 18:21:15 America/Chicago
    - Fix silly POD error (David Steinbrunner)
 
