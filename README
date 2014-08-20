@@ -3,7 +3,7 @@ NAME
     structure in Perl 5
 
 VERSION
-    version 1.003000
+    version 1.003001
 
 SYNOPSIS
      use Syntax::Keyword::Gather;
@@ -154,7 +154,7 @@ DESCRIPTION
         }
      }
 
-    If you like it really short, you can also gather-take $_ magically:
+    If you like it really short, you can also "gather"/"take" $_ magically:
 
     my @numbers_with_two = gather { for (1..20) { take if /2/ } }; #
     @numbers_with_two contains 2, 12, 20
@@ -169,11 +169,6 @@ HISTORY
     to avoid the slightly incendiary name
     to avoid the use of the Perl6::Exporter
     ~ doesn't overload to mean string context
-    to no longer takes the current topic ($_)
-
-    The last item is actually due to an unintended side-effect of the fact
-    that if "take" has an array of zero length it takes $_, which is
-    surprising at the very least. I'll fix that issue if I can.
 
 BUGS AND IRRITATIONS
     It would be nice to be able to code the default case as:

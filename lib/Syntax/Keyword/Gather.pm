@@ -1,5 +1,5 @@
 package Syntax::Keyword::Gather;
-$Syntax::Keyword::Gather::VERSION = '1.003000';
+$Syntax::Keyword::Gather::VERSION = '1.003001';
 use strict;
 use warnings;
 
@@ -50,7 +50,7 @@ sub break() {
 }
 
 package Syntax::Keyword::Gather::MagicArrayRef;
-$Syntax::Keyword::Gather::MagicArrayRef::VERSION = '1.003000';
+$Syntax::Keyword::Gather::MagicArrayRef::VERSION = '1.003001';
 use overload
    'bool'   => sub { @{$_[0]} > 0      },
    '0+'     => sub { @{$_[0]} + 0      },
@@ -71,7 +71,7 @@ Syntax::Keyword::Gather - Implements the Perl 6 'gather/take' control structure 
 
 =head1 VERSION
 
-version 1.003000
+version 1.003001
 
 =head1 SYNOPSIS
 
@@ -224,7 +224,7 @@ first line they have in common. We could gather the lines like this:
     }
  }
 
-If you like it really short, you can also gather-take $_ magically:
+If you like it really short, you can also C<gather>/C<take> $_ magically:
 
 my @numbers_with_two = gather {
     for (1..20) {
@@ -248,13 +248,7 @@ This module was forked from Damian Conway's L<Perl6::Gather> for a few reasons.
 
 =item ~ doesn't overload to mean string context
 
-=item to no longer takes the current topic ($_)
-
 =back
-
-The last item is actually due to an unintended side-effect of the fact that if
-C<take> has an array of zero length it takes $_, which is surprising at the very
-least.  I'll fix that issue if I can.
 
 =head1 BUGS AND IRRITATIONS
 
